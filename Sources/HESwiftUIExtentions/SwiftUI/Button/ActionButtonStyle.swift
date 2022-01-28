@@ -38,7 +38,7 @@ struct ActionButtonStyle: ButtonStyle {
 
 extension View {
     
-    func buttonPressEffect( scaleEffect : CGFloat = 0.99 , opacity : Double = 0.94 ,isPressed : Bool )-> some View  {
+    public func buttonPressEffect( scaleEffect : CGFloat = 0.99 , opacity : Double = 0.94 ,isPressed : Bool )-> some View  {
         if isPressed {
            return self.scaleEffect(scaleEffect)
             .opacity(opacity)

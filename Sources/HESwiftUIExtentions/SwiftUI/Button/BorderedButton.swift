@@ -8,11 +8,18 @@
 import SwiftUI
 
 //Used IN Landing Signup 
-struct RoundedBorderedButtonStyle: ButtonStyle {
+public struct RoundedBorderedButtonStyle: ButtonStyle {
+    public init(backgroundColor: Color, fontColor: Color, borderedColor: Color) {
+        self.backgroundColor = backgroundColor
+        self.fontColor = fontColor
+        self.borderedColor = borderedColor
+    }
+    
     let backgroundColor : Color
     let fontColor : Color
     let borderedColor : Color
-    func makeBody(configuration: Configuration) -> some View {
+    
+    public func makeBody(configuration: Configuration) -> some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20 , style: .continuous)
                 .fill(backgroundColor, strokeBorder: borderedColor, lineWidth: 1)
