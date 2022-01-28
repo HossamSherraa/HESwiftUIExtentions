@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ActionButtonStyle: ButtonStyle {
+public struct ActionButtonStyle: ButtonStyle {
     let backgroundColor : Color
     let fontColor : Color
     @Binding var isLoading : Bool
     
-    func makeBody(configuration: Configuration) -> some View {
+    public func makeBody(configuration: Configuration) -> some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20 , style: .continuous)
                 .fill(backgroundColor)

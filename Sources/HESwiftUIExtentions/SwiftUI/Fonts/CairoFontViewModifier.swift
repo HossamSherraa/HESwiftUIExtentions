@@ -20,7 +20,7 @@ struct CairoFontModifier : ViewModifier {
 }
 
 extension View {
-    func font(cairoFont : CairoFont)->some View {
+   public  func font(cairoFont : CairoFont)->some View {
          modifier(CairoFontModifier(cairoFont: cairoFont))
     }
 }

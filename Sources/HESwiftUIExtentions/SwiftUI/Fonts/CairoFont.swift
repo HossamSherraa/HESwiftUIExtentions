@@ -15,24 +15,33 @@ import SwiftUI
 // concrete will provide size
 //HowO/C Princile . when adding new weight I will create new One , instead of change the concrete
 
-protocol CairoFont {
+public protocol CairoFont {
     var size : CGFloat {get}
     var fontNameInBundel : String {get}
 }
 
-struct CairoFontBlack : CairoFont {
-    var size: CGFloat
+public struct CairoFontBlack : CairoFont {
+    public init(size: CGFloat) {
+        self.size = size
+    }
     
-    var fontNameInBundel: String {
+    
+  public  var size: CGFloat
+    
+    public var fontNameInBundel: String {
         "Cairo-Black"
     }
 }
 
 
-struct CairoFontBold : CairoFont {
-    var size: CGFloat
+public struct CairoFontBold : CairoFont {
+    public init(size: CGFloat) {
+        self.size = size
+    }
+    
+    public var size: CGFloat
 
-    var fontNameInBundel: String {
+    public var fontNameInBundel: String {
         "Cairo-Bold"
     }
     
@@ -40,10 +49,14 @@ struct CairoFontBold : CairoFont {
 }
 
 
-struct CairoFontExtraLight : CairoFont {
-    var size: CGFloat
+public struct CairoFontExtraLight : CairoFont {
+    public init(size: CGFloat) {
+        self.size = size
+    }
     
-    var fontNameInBundel: String {
+    public  var size: CGFloat
+    
+    public var fontNameInBundel: String {
         "Cairo-ExtraLight"
     }
     
@@ -51,10 +64,14 @@ struct CairoFontExtraLight : CairoFont {
 }
 
 
-struct CairoFontLight : CairoFont {
-    var size: CGFloat
+public struct CairoFontLight : CairoFont {
+    public init(size: CGFloat) {
+        self.size = size
+    }
     
-    var fontNameInBundel: String {
+    public var size: CGFloat
+    
+    public var fontNameInBundel: String {
         "Cairo-Light"
     }
     
@@ -62,10 +79,14 @@ struct CairoFontLight : CairoFont {
 }
 
 
-struct CairoFontRegular : CairoFont {
-    var size: CGFloat
+public struct CairoFontRegular : CairoFont {
+    public init(size: CGFloat) {
+        self.size = size
+    }
     
-    var fontNameInBundel: String {
+    public  var size: CGFloat
+    
+    public var fontNameInBundel: String {
         "Cairo-Regular"
     }
     
@@ -73,10 +94,14 @@ struct CairoFontRegular : CairoFont {
 }
 
 
-struct CairoFontSemiBold : CairoFont {
-    var size: CGFloat
+public struct CairoFontSemiBold : CairoFont {
+    public init(size: CGFloat) {
+        self.size = size
+    }
     
-    var fontNameInBundel: String {
+    public var size: CGFloat
+    
+    public var fontNameInBundel: String {
         "Cairo-SemiBold"
     }
     
@@ -84,7 +109,7 @@ struct CairoFontSemiBold : CairoFont {
 
 
 extension View {
-    func titleCairoFont()-> some View{
+    public func titleCairoFont()-> some View{
         self.font(cairoFont: CairoFontSemiBold(size: 17))
     }
 }
